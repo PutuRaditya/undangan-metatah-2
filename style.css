@@ -1,0 +1,184 @@
+:root {
+  --blue: #14213d;
+  --orange: #fca311;
+  --platinum: #e5e5e5;
+  --shadow: #050505;
+}
+
+body {
+  font-family: "Ancizar Serif";
+  font-weight: 500;
+  color: var(--platinum);
+  background-color: var(--blue);
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* background-image: url(img/mandala-op15.png); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 580px;
+}
+
+.hero .mandala-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 580px;
+  height: 580px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.2; /* bisa kamu sesuaikan */
+  animation: spin 60s linear infinite;
+  pointer-events: none; /* supaya tidak mengganggu klik */
+}
+
+.hero .container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero .ornamen {
+  position: absolute;
+  width: 540px;
+  z-index: -1;
+}
+
+.hero .ornamen-kanan {
+  bottom: -2rem;
+  right: -6rem;
+  transform: rotate(30deg);
+}
+
+.hero .ornamen-kiri {
+  top: -2rem;
+  left: -8rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+.hero h2 {
+  padding-top: 1.4rem;
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.hero h3,
+.hero p {
+  padding-top: 0.7rem;
+  font-size: 1.8rem;
+  margin: 0.25rem 0;
+}
+
+.hero .btn-custom {
+  color: var(--blue);
+  font-size: 1.6rem;
+  background-color: var(--platinum);
+  padding: 0.8rem 2rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.hero .btn-custom:hover {
+  background-color: transparent;
+  color: var(--platinum);
+  border: 2px solid var(--platinum);
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Media Query */
+
+/* laptop */
+
+@media (max-width: 992px) {
+  .hero .ornamen {
+    width: 400px;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero h3 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .hero .ornamen {
+    width: 350px;
+  }
+
+  .hero .ornamen-kiri {
+    transform: rotate(30deg);
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    padding-top: 1rem;
+  }
+
+  .hero h3 {
+    padding-top: 0.6rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+}
