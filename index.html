@@ -29,6 +29,10 @@
       rel="stylesheet"
     />
 
+    <!-- Simply Countdown -->
+    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
+    <script src="countdown/simplyCountdown.min.js"></script>
+
     <!-- CSS Style link -->
 
     <link rel="stylesheet" href="style.css" />
@@ -85,8 +89,8 @@
     </section>
     <section class="time" id="time">
       <div class="container">
-        <div class="row">
-          <div class="col text-center">
+        <div class="row justify-content-center">
+          <div class="col-7 col-md-8 col-lg-12 text-center">
             <img
               src="img/ornamen-batas.png"
               alt="Ornamen Batas - Hero dengan Home"
@@ -98,7 +102,7 @@
                 <div class="card-body">
                   <!-- <h1 class="card-title">Waktu dan Tempat</h1> -->
                   <h2>Minggu, 24 Agustus 2025</h2>
-                  <h3>15.00 WITA-Selesai</h3>
+                  <h3>15.00 WITA - Selesai</h3>
                   <h3>
                     Jl. Anggrek II No.11, Lingk. Tegal Saat, Kapal, Mengwi,
                     Badung
@@ -111,6 +115,15 @@
                 </div>
               </div>
             </div>
+            <p>
+              Merupakan suatu kebahagiaan dan kehormatan bagi kami apabila
+              Bapak/ Ibu/ Saudara/i berkenan hadir untuk memberikan doa restu.
+            </p>
+            <p>Atas kehadiran dan doa restunya kami ucapkan terimakasih</p>
+            <h4>Om Shanti, Shanti, Shanti Om</h4>
+            <h5>Menuju Acara</h5>
+
+            <div class="simply-countdown"></div>
           </div>
         </div>
       </div>
@@ -125,6 +138,25 @@
         <div class="row"></div>
       </div>
     </footer>
+
+    <!-- SimplyCountdown Script -->
+
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2025, // required
+        month: 11, // required
+        day: 7, // required
+        hours: 7, // Default is 0 [0-23] integer
+
+        words: {
+          //words displayed into the countdown
+          days: { singular: "hari", plural: "hari" },
+          hours: { singular: "jam", plural: "jam" },
+          minutes: { singular: "menit", plural: "menit" },
+          seconds: { singular: "detik", plural: "detik" },
+        },
+      });
+    </script>
 
     <!-- Bootstrap JavaScript -->
 
