@@ -13,6 +13,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  text-align: center;
 }
 
 .hero {
@@ -49,7 +50,7 @@ body {
   height: 580px;
   transform: translate(-50%, -50%);
   z-index: -1;
-  opacity: 0.2; /* bisa kamu sesuaikan */
+  opacity: 1; /* bisa kamu sesuaikan */
   animation: spin 60s linear infinite;
   pointer-events: none; /* supaya tidak mengganggu klik */
 }
@@ -102,7 +103,8 @@ body {
   margin: 0.25rem 0;
 }
 
-.hero .btn-custom {
+.hero .btn-custom,
+.time .btn-primary {
   color: var(--blue);
   font-size: 1.6rem;
   background-color: var(--platinum);
@@ -113,13 +115,112 @@ body {
   display: inline-block;
   transition: background-color 0.3s ease;
   width: fit-content;
+  border: var(--platinum);
 }
 
-.hero .btn-custom:hover {
+.hero .btn-custom:hover,
+.time .btn-primary:hover {
   background-color: transparent;
   color: var(--platinum);
   border: 2px solid var(--platinum);
 }
+
+.home{
+  justify-content: center;
+}
+
+.home::before{
+  content: "";
+  position: absolute;
+  background-image: url(img/background-ornament-2-gradient-up.png);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+  z-index: -1;
+}
+
+.home .batas1,
+.time .batas1{
+  width: 46rem;
+}
+
+.home h1{
+  padding-top: 5rem;
+  font-size: 4.3rem;
+}
+
+.home .p1{
+  padding-top:  2rem;
+  font-size: 1.4rem;
+}
+
+.home h2{
+  padding-top: 1rem;
+  font-size: 2.8rem;
+}
+
+.home .p2{
+  padding-top: 1.6rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.time{
+  color: var(--platinum);
+}
+
+
+.time::before{
+  content: "";
+  position: relative;
+  background-image: url(img/background-ornament-2.png);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+  z-index: -1;
+}
+
+.time .batas1{
+  padding-bottom: 5rem;
+}
+
+.time .card{
+  color: var(--platinum);
+  justify-content: center;
+  width: fit-content;
+  background-color: rgba(229, 229, 229, 0.2);
+  border-radius: 50px;
+  box-shadow: 2px 3px 5px 3px var(--shadow);
+  padding: 1rem;
+}
+
+.time .card h2{
+  padding-bottom: 0.7rem;
+}
+
+.time .card h3{
+  padding-bottom: 0.8rem;
+}
+
+/* .time .card .btn-primary{
+  padding: 0.8rem;
+  background-color: var(--blue);
+  color: var(--platinum);
+  border: 0;
+  border-radius: 25px;
+  font-size: 1.4rem;
+}
+
+.time .card .btn-primary:hover{
+  background-color: none;
+  color: ;
+} */
 
 @keyframes spin {
   from {
