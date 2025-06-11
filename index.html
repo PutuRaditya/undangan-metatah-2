@@ -42,7 +42,7 @@
       <img src="img/mandala-op15.png" alt="Mandala" class="mandala-bg" />
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-7 col-md-8 col-lg-12">
+          <div class="col-10 col-md-11 col-lg-12">
             <img
               src="img/bunga-1.png"
               alt="Ornamen Kanan Bawah"
@@ -66,7 +66,7 @@
     <section class="home" id="home">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-6 col-md-7 col-lg-12">
+          <div class="col-10 col-md-11 col-lg-12">
             <img
               src="img/ornamen-batas.png"
               alt="Ornamen Batas - Hero dengan Home"
@@ -90,7 +90,7 @@
     <section class="time" id="time">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-7 col-md-8 col-lg-12 text-center">
+          <div class="col-10 col-md-11 col-lg-12 text-center">
             <img
               src="img/ornamen-batas.png"
               alt="Ornamen Batas - Hero dengan Home"
@@ -111,7 +111,11 @@
                     With supporting text below as a natural lead-in to
                     additional content.
                   </p> -->
-                  <a href="#" class="btn btn-primary">Maps Lokasi</a>
+                  <a
+                    href="https://maps.app.goo.gl/8fUgaNSVSTqdXmD79"
+                    class="btn btn-primary"
+                    >Maps Lokasi</a
+                  >
                 </div>
               </div>
             </div>
@@ -130,7 +134,97 @@
     </section>
     <section class="rsvp" id="rsvp">
       <div class="container">
-        <div class="row"></div>
+        <div class="row">
+          <div class="col">
+            <img
+              src="img/ornamen-batas.png"
+              alt="Ornamen Batas - Hero dengan Home"
+              class="batas1"
+            />
+            <h2>Mohon Doa Restu</h2>
+            <!-- <form
+              class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+              method="POST"
+              action="https://script.google.com/macros/s/AKfycbzX90wFfi_i6RseZF0mAnLEmHZoknguO0SAou4PQ7EZBDzOyqqNhZxB4aMPTmABujC4/exec"
+              id="my-form"
+            >
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Nama</label>
+                  <input
+                    type="nama"
+                    class="form-control"
+                    id="nama"
+                    name="nama"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="jumlah" class="form-label">Jumlah</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="jumlah"
+                    name="jumlah"
+                    min="1"
+                    max="5"
+                    length="1"
+                    value="5"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="status" class="form-label">Konfirmasi</label>
+
+                  <select name="status" id="status" class="form-select">
+                    <option selected>Pilih salah satu</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12" style="margin-top: 36px">
+                <button class="btn btn-primary">Kirim</button>
+              </div>
+            </form> -->
+            <form
+              method="POST"
+              id="my-form"
+              action="https://script.google.com/macros/s/AKfycbw58VnSaRUOh5FSl3wkTDjFH94wBO2Rnx1m0lFGMGQ9RWAaJh9O5rD1IJWdGoG79igp/exec"
+            >
+              <div class="mb-3">
+                <label for="nama" class="form-label">Masukan Namamu</label>
+                <input type="nama" class="form-control" id="nama" name="nama" />
+              </div>
+              <div class="mb-3">
+                <label for="ucapan" class="form-label">Berikan Ucapanmu</label>
+                <textarea
+                  type="ucapan"
+                  class="form-control"
+                  id="ucapan"
+                  name="ucapan"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="status" class="form-label"
+                  >Konfirmasi Kehadiran</label
+                >
+
+                <select name="kehadiran" id="kehadiran" class="form-select">
+                  <option selected>Pilih salah satu</option>
+                  <option value="Hadir">Hadir</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                  <option value="Ragu-ragu">Ragu-ragu</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+
+            <ul id="ucapanContainer"></ul>
+          </div>
+        </div>
       </div>
     </section>
     <footer>
@@ -138,6 +232,8 @@
         <div class="row"></div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
 
     <!-- SimplyCountdown Script -->
 
@@ -155,6 +251,25 @@
           minutes: { singular: "menit", plural: "menit" },
           seconds: { singular: "detik", plural: "detik" },
         },
+      });
+    </script>
+
+    <!-- Script Ucapan Doa  -->
+
+    <script>
+      window.addEventListener("load", function () {
+        const form = document.getElementById("my-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            alert("Success!");
+          });
+        });
       });
     </script>
 
