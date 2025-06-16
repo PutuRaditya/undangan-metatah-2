@@ -635,7 +635,7 @@ body,
   }
 
   .time h4 {
-    margin: 2rem;
+    margin: 1rem;
     font-size: 1.6rem;
   }
 
@@ -650,18 +650,23 @@ body,
   }
 
   .simply-countdown > .simply-section {
-    padding: 1rem;
-    width: 90px;
-    height: 90px;
+    padding: 0.6rem;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
   }
 
-  .simply-countdown .simply-word {
+  .simply-countdown .simply-amount{
     font-size: 1rem;
+  } 
+
+  .simply-countdown .simply-word {
+    font-size: 0.6rem;
     margin-top: 0.2rem;
   }
 
   .rsvp {
-    padding: 2rem;
+    padding: 0;
   }
 
   .rsvp h2 {
