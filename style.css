@@ -125,81 +125,80 @@ body {
   border: 2px solid var(--platinum);
 }
 
-.home{
+.home {
   justify-content: center;
+  position: relative;
 }
 
-.home::before{
+.home::before {
   content: "";
   position: absolute;
-  background-image: url(img/background-ornament-2-gradient-up.png);
+  background-image: url(img/background-ornament-2-gradient-up.webp);
   width: 100%;
   height: 100%;
   left: 0;
-  background-repeat: repeat;
+  background-repeat: repeat-x;
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   z-index: -1;
 }
 
 .home .batas1,
 .time .batas1,
-.rsvp .batas1{
+.rsvp .batas1 {
   width: 46rem;
 }
 
-.home h1{
+.home h1 {
   padding-top: 5rem;
   font-size: 4.3rem;
 }
 
-.home .p1{
-  padding-top:  2rem;
+.home .p1 {
+  padding-top: 2rem;
   font-size: 1.4rem;
 }
 
-.home h2{
+.home h2 {
   padding-top: 1rem;
   font-size: 2.8rem;
 }
 
-.home .p2{
+.home .p2 {
   padding-top: 1.6rem;
   padding-bottom: 0.5rem;
   font-size: 1.3rem;
 }
 
-.time{
+.time {
   color: var(--platinum);
   position: relative;
 }
 
-
-.time::before{
+.time::before {
   content: "";
   position: absolute;
-  background-image: url(img/background-ornament-2.png);
+  background-image: url(img/background-ornament-2.webp);
   width: 100%;
   height: 100%;
   left: 0;
-  top: -35px;
+  top: 0;
   background-repeat: repeat;
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   z-index: -1;
 }
 
-.time .batas1{
+.time .batas1 {
   padding-bottom: 3rem;
 }
 
-
-.time h1{
+.time h1 {
   margin-bottom: 2rem;
   font-size: 3rem;
 }
 
-.time .card{
+.time .card {
   color: var(--platinum);
   justify-content: center;
   width: fit-content;
@@ -209,27 +208,27 @@ body {
   padding: 1rem;
 }
 
-.time .card h2{
+.time .card h2 {
   padding-bottom: 0.7rem;
 }
 
-.time .card h3{
+.time .card h3 {
   padding-bottom: 0.8rem;
   font-size: 1.4rem;
 }
 
-.time p{
+.time p {
   margin-top: 2rem;
   font-size: 1.2rem;
 }
 
-.time h4{
+.time h4 {
   margin: 5rem;
   font-size: 3rem;
 }
 
-.time h5{
-  font-size: 2.5rem ;
+.time h5 {
+  font-size: 2.5rem;
 }
 
 .simply-countdown {
@@ -248,7 +247,7 @@ body {
   background-color: var(--platinum);
   color: var(--blue);
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -270,26 +269,191 @@ body {
   margin-top: 0.5rem;
 }
 
-.rsvp{
+.rsvp {
   margin-top: 2rem;
+  position: relative;
+}
+
+.rsvp::before {
+  content: "";
+  position: absolute;
+  background-image: url(img/background-ornament-2-gradient-down.webp);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0px;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.rsvp h2 {
+  margin-top: 2.5rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.rsvp label {
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #f0f0f0;
+  font-size: 1.3rem; /* agar kontras dengan background navy */
+}
+
+.btn-kirim {
+  background-color: var(--platinum); /* biru navy tua */
+  color: var(--blue); /* platinum putih */
+  border: none;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-family: "Ancizar Serif", serif;
+  border-radius: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.5rem;
+}
+
+.btn-kirim:hover {
+  background-color: #172035; /* lebih gelap sedikit */
+  color: var(--platinum);
+  transform: scale(1.03);
+}
+
+.btn-kirim:disabled {
+  background-color: #a6a6a6;
+  cursor: not-allowed;
 }
 
 #ucapanContainer {
   list-style: none;
   padding: 0;
   margin-top: 2rem;
+  max-height: 400px; /* batas tinggi area */
+  overflow-y: auto; /* scroll vertical */
+  /* border: 1px solid var(--platinum); */
+  border-radius: 10px;
+  background-color: transparent;
 }
 
 #ucapanContainer li {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--platinum);
+  background-color: transparent;
   border: 1px solid var(--platinum);
   padding: 1rem;
   margin-bottom: 1rem;
-  border-radius: 12px;
-  text-align: left;
+  border-radius: 10px;
+  color: var(--platinum);
 }
 
+#ucapanContainer {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px; /* beri ruang agar tidak kepotong scrollbar */
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+  background-color: transparent;
+  border-radius: 12px;
+  /* border: 1px solid #e0e0e0; */
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar untuk Webkit (Chrome, Safari, Opera) */
+#ucapanContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+#ucapanContainer::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+#ucapanContainer::-webkit-scrollbar-thumb {
+  background-color: var(--blue); /* hijau lembut */
+  border-radius: 8px;
+  border: 2px solid #f5f5f5;
+}
+
+/* Scrollbar untuk Firefox */
+#ucapanContainer {
+  scrollbar-color: var(--blue) #f5f5f5;
+  scrollbar-width: thin;
+}
+
+/* Style untuk tiap ucapan item */
+#ucapanContainer li {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: transparent;
+  /* border-left: 4px solid var(--blue); */
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  color: var(--platinum);
+}
+
+footer {
+  margin-top: 5rem;
+}
+
+footer p {
+  font-size: 20px;
+}
+
+footer .col {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer ul {
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+  margin: 0.5rem;
+}
+
+footer i {
+  font-size: 2rem;
+  color: var(--platinum);
+}
+
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 0.3rem;
+  cursor: pointer;
+  color: white;
+  opacity: 50%;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: none;
+}
+
+@keyframes rotating {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 
 @keyframes spin {
   from {
@@ -312,6 +476,11 @@ body {
 
 /* tablet */
 @media (max-width: 768px) {
+  .home .batas1,
+  .time .batas1,
+  .rsvp .batas1 {
+    width: 30rem;
+  }
   .hero h1 {
     font-size: 2.2rem;
   }
@@ -323,17 +492,36 @@ body {
   .hero p {
     font-size: 1.3rem;
   }
+
+  .home::before {
+    top: 0px;
+  }
+
+  .rsvp::before {
+    top: 0px;
+  }
 }
 
 /* Mobile */
 
 @media (max-width: 576px) {
   .hero .ornamen {
-    width: 350px;
+    width: 300px;
   }
 
   .hero .ornamen-kiri {
     transform: rotate(30deg);
+  }
+
+  .hero .mandala-bg{
+    width: 500px;
+    height: 500px;
+  }
+
+  .home .batas1,
+  .time .batas1,
+  .rsvp .batas1 {
+    width: 20rem;
   }
 
   .hero h1 {
@@ -350,5 +538,116 @@ body {
 
   .hero p {
     font-size: 1.5rem;
+  }
+
+  .home h1 {
+    font-size: 2rem;
+  }
+
+  .home .p1 {
+    font-size: 0.8rem;
+  }
+
+  .home h2 {
+    padding-top: 0.5rem;
+    font-size: 1.6rem;
+  }
+
+  .home .p2 {
+    font-size: 1rem;
+    padding-bottom: 0;
+  }
+
+  .home h3 {
+    font-size: 1.1rem;
+  }
+
+  .time h1 {
+    font-size: 1.8rem;
+  }
+
+  .time .card {
+    margin: 1rem;
+  }
+  .time .card h2 {
+    font-size: 1.4rem;
+  }
+
+  .time .card h3 {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .time .card a {
+    font-size: 1.3rem;
+  }
+
+  .time p {
+    font-size: 1rem;
+    margin: 1rem;
+  }
+
+  .time h4 {
+    margin: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .time h5 {
+    margin-top: 4rem;
+    font-size: 2rem;
+  }
+
+  .simply-countdown {
+    gap: 0;
+    margin-top: 1.5rem;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 1rem;
+    width: 90px;
+    height: 90px;
+  }
+
+  .simply-countdown .simply-word {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+
+  .rsvp {
+    padding: 2rem;
+  }
+
+  .rsvp h2 {
+    font-size: 2.3rem;
+  }
+
+  .rsvp label {
+    font-size: 1.1rem;
+  }
+
+  .btn-kirim {
+    font-size: 1rem;
+  }
+
+  footer p{
+    font-size: 15px;
+  }
+
+  footer ul{
+    gap: 5px;
+  }
+  
+  footer li{
+    margin: 0.3rem;
+  }
+
+  footer i{
+    font-size: 1.4rem;
+  }
+
+  .audio-icon-wrapper{
+    font-size: 2.7rem;
+    bottom: 1.3rem;
+    right: 0.1rem;
   }
 }

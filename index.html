@@ -39,17 +39,17 @@
   </head>
   <body>
     <section class="hero" id="hero">
-      <img src="img/mandala-op15.png" alt="Mandala" class="mandala-bg" />
+      <img src="img/mandala-op15.webp" alt="Mandala" class="mandala-bg" />
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-10 col-md-11 col-lg-12">
+          <div class="col-12 col-md-8 col-lg-7">
             <img
-              src="img/bunga-1.png"
+              src="img/bunga-1.webp"
               alt="Ornamen Kanan Bawah"
               class="ornamen ornamen-kanan"
             />
             <img
-              src="img/bunga-2.png"
+              src="img/bunga-2.webp"
               alt="Ornamen Kiri Atas"
               class="ornamen ornamen-kiri"
             />
@@ -57,8 +57,8 @@
             <h2>Radit & Nara</h2>
             <h3>Kepada</h3>
             <p>Bapak/Ibu/Saudara/i</p>
-            <h3>Nama</h3>
-            <a href="#home" class="btn btn-custom mt-4">Buka Undangan</a>
+            <h3><span>Nama</span></h3>
+            <a href="#home" class="btn btn-custom mt-4" onClick="enableScroll()">Buka Undangan</a>
           </div>
         </div>
       </div>
@@ -66,12 +66,12 @@
     <section class="home" id="home">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-10 col-md-11 col-lg-12">
+          <div class="col-12 col-md-8 col-lg-7">
             <img
-              src="img/ornamen-batas.png"
+              src="img/ornamen-batas.webp"
               alt="Ornamen Batas - Hero dengan Home"
               class="batas1"
-            />
+            >
             <h1>Om Swastyastu</h1>
             <p class="p1">
               Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan
@@ -90,12 +90,12 @@
     <section class="time" id="time">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-10 col-md-11 col-lg-12 text-center">
+          <div class="col-12 col-md-8 col-lg-7 text-center">
             <img
-              src="img/ornamen-batas.png"
+              src="img/ornamen-batas.webp"
               alt="Ornamen Batas - Hero dengan Home"
               class="batas1"
-            />
+            >
             <h1>Waktu dan Tempat</h1>
             <div class="d-flex justify-content-center">
               <div class="card text-center">
@@ -134,65 +134,18 @@
     </section>
     <section class="rsvp" id="rsvp">
       <div class="container">
-        <div class="row">
-          <div class="col">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-7">
             <img
-              src="img/ornamen-batas.png"
+              src="img/ornamen-batas.webp"
               alt="Ornamen Batas - Hero dengan Home"
               class="batas1"
-            />
-            <h2>Mohon Doa Restu</h2>
-            <!-- <form
-              class="row row-cols-md-auto g-3 align-items-center justify-content-center"
-              method="POST"
-              action="https://script.google.com/macros/s/AKfycbzX90wFfi_i6RseZF0mAnLEmHZoknguO0SAou4PQ7EZBDzOyqqNhZxB4aMPTmABujC4/exec"
-              id="my-form"
             >
-              <div class="col-12">
-                <div class="mb-3">
-                  <label for="nama" class="form-label">Nama</label>
-                  <input
-                    type="nama"
-                    class="form-control"
-                    id="nama"
-                    name="nama"
-                  />
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-3">
-                  <label for="jumlah" class="form-label">Jumlah</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="jumlah"
-                    name="jumlah"
-                    min="1"
-                    max="5"
-                    length="1"
-                    value="5"
-                  />
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-3">
-                  <label for="status" class="form-label">Konfirmasi</label>
-
-                  <select name="status" id="status" class="form-select">
-                    <option selected>Pilih salah satu</option>
-                    <option value="Hadir">Hadir</option>
-                    <option value="Tidak Hadir">Tidak Hadir</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-12" style="margin-top: 36px">
-                <button class="btn btn-primary">Kirim</button>
-              </div>
-            </form> -->
+            <h2>Mohon Doa Restu</h2>
             <form
               method="POST"
               id="my-form"
-              action="https://script.google.com/macros/s/AKfycbw58VnSaRUOh5FSl3wkTDjFH94wBO2Rnx1m0lFGMGQ9RWAaJh9O5rD1IJWdGoG79igp/exec"
+              action="https://script.google.com/macros/s/AKfycby95I8qm6qRyBYbC-m8-xROdjgb7hIxVxXAq6vohYwr7KkIf02PlEjkWI3zL-X_kQgt/exec"
             >
               <div class="mb-3">
                 <label for="nama" class="form-label">Masukan Namamu</label>
@@ -208,7 +161,7 @@
                 ></textarea>
               </div>
               <div class="mb-3">
-                <label for="status" class="form-label"
+                <label for="kehadiran" class="form-label"
                   >Konfirmasi Kehadiran</label
                 >
 
@@ -219,8 +172,12 @@
                   <option value="Ragu-ragu">Ragu-ragu</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-kirim">Kirim Ucapan</button>
             </form>
+            <div
+              id="notifikasiUcapan"
+              class="alert text-center mt-3 d-none"
+            ></div>
 
             <ul id="ucapanContainer"></ul>
           </div>
@@ -229,9 +186,46 @@
     </section>
     <footer>
       <div class="container">
-        <div class="row"></div>
+        <div class="row">
+          <div class="col">
+            <p>Create by Putu Raditya &copy 2025</p>
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/putuepung/"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://wa.me/6281239007868"
+                  ><i class="bi bi-whatsapp"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/putu.raditya.7773"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/putu-raditya-perdana-putra/"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source src="audio/beauty-in-colors-gus-teja.mp3" type="audio/mp3" />
+      </audio>
+
+      <div class="audio-icon-wrapper" style="display: none">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
 
     <script src="script.js"></script>
 
@@ -259,18 +253,152 @@
     <script>
       window.addEventListener("load", function () {
         const form = document.getElementById("my-form");
+        const notifikasi = document.getElementById("notifikasiUcapan");
+
         form.addEventListener("submit", function (e) {
           e.preventDefault();
+
+          // Ubah tombol jadi loading
+          const tombol = form.querySelector("button");
+          const teksAwal = tombol.innerHTML;
+          tombol.disabled = true;
+          tombol.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span> Mengirim...`;
+
           const data = new FormData(form);
-          const action = e.target.action;
+          const action = form.action;
+
           fetch(action, {
             method: "POST",
             body: data,
-          }).then(() => {
-            alert("Success!");
-          });
+          })
+            .then((response) => {
+              if (response.ok) {
+                tampilkanNotifikasi("Ucapan sudah tersampaikan ❤️", "success");
+                form.reset();
+              } else {
+                throw new Error("Gagal mengirim");
+              }
+            })
+            .catch((error) => {
+              console.error(error);
+              tampilkanNotifikasi(
+                "Gagal mengirim ucapan. Silakan coba lagi.",
+                "danger"
+              );
+            })
+            .finally(() => {
+              tombol.disabled = false;
+              tombol.innerHTML = teksAwal;
+            });
         });
+
+        function tampilkanNotifikasi(pesan, tipe) {
+          notifikasi.textContent = pesan;
+          notifikasi.className = `alert alert-${tipe} text-center mt-3`;
+          setTimeout(() => {
+            notifikasi.className += " d-none";
+          }, 4000); // sembunyikan setelah 4 detik
+        }
       });
+    </script>
+
+    <!-- Scrip menampilkan ucapan Doa -->
+
+    <script>
+      const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycby95I8qm6qRyBYbC-m8-xROdjgb7hIxVxXAq6vohYwr7KkIf02PlEjkWI3zL-X_kQgt/exec";
+
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch(GOOGLE_SCRIPT_URL)
+          .then((res) => res.json())
+          .then((data) => {
+            // Membalik data agar terbaru di atas
+            data.reverse().forEach((item) => {
+              if (item.nama && item.ucapan && item.kehadiran) {
+                tampilkanUcapan(item.nama, item.kehadiran, item.ucapan);
+              }
+            });
+          })
+          .catch((err) => console.error("Gagal mengambil data:", err));
+      });
+
+      function tampilkanUcapan(nama, kehadiran, ucapan) {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${nama}</strong> (${kehadiran})<br>${ucapan}`;
+        document.getElementById("ucapanContainer").appendChild(li);
+      }
+    </script>
+
+    <!-- Script Ubah Nama Undangan -->
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get("nama") || "";
+
+      // const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i";
+      // console.log(nama);
+
+      const namaContainer = document.querySelector(".hero h3 span");
+
+      namaContainer.innerText = `${nama}`.replace(/ ,$/, ",");
+
+      document.querySelector("#nama").value = nama;
+    </script>
+
+    <!-- Script Audio dan Kunci Halaman Awal -->
+
+    <script>
+      const rootElement = document.querySelector(":root");
+      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
+      const song = document.querySelector("#song");
+
+      let isPlaying = false;
+
+      function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        window.onscroll = function () {
+          window.scrollTo(scrollTop, scrollLeft);
+        };
+
+        rootElement.style.scrollBehavior = "auto";
+      }
+
+      function enableScroll() {
+        window.onscroll = function () {};
+        rootElement.style.scrollBehavior = "smooth";
+        // localStorage.setItem("opened", "true");
+
+        playAudio();
+      }
+
+      function playAudio() {
+        song.volume = 0.2;
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        isPlaying = true;
+      }
+
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove("bi-disc");
+          audioIcon.classList.add("bi-pause-circle");
+        } else {
+          song.play();
+          audioIcon.classList.remove("bi-pause-circle");
+          audioIcon.classList.add("bi-disc");
+        }
+
+        isPlaying = !isPlaying;
+      };
+
+      // if (!localStorage.getItem("opened")) {
+      // disableScroll();
+      // }
+      disableScroll();
     </script>
 
     <!-- Bootstrap JavaScript -->
