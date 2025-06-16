@@ -480,6 +480,30 @@ footer i {
   }
 }
 
+.hero.locked {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--blue);
+  z-index: 9999;
+}
+
+/* Sembunyikan semua bagian lain saat halaman masih terkunci */
+body.scroll-lock section:not(.hero),
+body.scroll-lock footer,
+body.scroll-lock #audio-container {
+  display: none !important;
+}
+
+/* Tambahan untuk mencegah efek overscroll */
+html, body, .hero {
+  overscroll-behavior: none;
+}
+
+
 /* Media Query */
 
 /* laptop */

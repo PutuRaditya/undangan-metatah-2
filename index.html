@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="hero" id="hero">
+    <section class="hero locked" id="hero">
       <img src="img/mandala-op15-2.webp" alt="Mandala" class="mandala-bg" />
       <div class="container">
         <div class="row justify-content-center">
@@ -383,9 +383,10 @@
         document.body.classList.remove("scroll-lock");
 
         // Buka posisi hero agar bisa scroll
-        document.querySelector(".hero").style.position = "relative";
-        document.querySelector(".hero").style.height = "auto";
-        // localStorage.setItem("opened", "true");
+        const hero = document.querySelector(".hero");
+        hero.classList.remove("locked");
+        hero.style.position = "relative";
+        hero.style.height = "auto";
 
         playAudio();
       }
