@@ -509,8 +509,15 @@ footer i {
     width: 300px;
   }
 
+  .hero .ornamen-kanan{
+    bottom: 0;
+    right: -2rem;
+  }
+
   .hero .ornamen-kiri {
     transform: rotate(30deg);
+    top: 0;
+    left: -5rem;
   }
 
   .hero .mandala-bg{
