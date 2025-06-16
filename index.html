@@ -359,6 +359,10 @@
 
       let isPlaying = false;
 
+      function preventTouch(e) {
+        e.preventDefault();
+      }
+
       function disableScroll() {
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -367,15 +371,20 @@
           window.scrollTo(scrollTop, scrollLeft);
         };
 
-        rootElement.style.scrollBehavior = "auto";
+        document.body.addEventListener("touchmove", preventTouch, {
+          passive: false,
+        });
         document.body.classList.add("scroll-lock");
-
       }
 
       function enableScroll() {
-        window.onscroll = function () {};
-        rootElement.style.scrollBehavior = "smooth";
+        window.onscroll = null;
+        document.body.removeEventListener("touchmove", preventTouch);
         document.body.classList.remove("scroll-lock");
+
+        // Buka posisi hero agar bisa scroll
+        document.querySelector(".hero").style.position = "relative";
+        document.querySelector(".hero").style.height = "auto";
         // localStorage.setItem("opened", "true");
 
         playAudio();
