@@ -5,10 +5,11 @@
   --shadow: #050505;
 }
 
-html, body, .hero {
+html,
+body,
+.hero {
   overscroll-behavior: none;
 }
-
 
 html {
   overflow-x: hidden;
@@ -31,15 +32,12 @@ body.scroll-lock {
   touch-action: none;
 }
 
-
 .hero {
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   text-align: center;
-  min-height: 100vh;
   padding: 2rem;
   box-sizing: border-box;
 }
@@ -499,10 +497,11 @@ body.scroll-lock #audio-container {
 }
 
 /* Tambahan untuk mencegah efek overscroll */
-html, body, .hero {
+html,
+body,
+.hero {
   overscroll-behavior: none;
 }
-
 
 /* Media Query */
 
