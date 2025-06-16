@@ -40,6 +40,7 @@ body.scroll-lock {
   text-align: center;
   padding: 2rem;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .hero::before {
