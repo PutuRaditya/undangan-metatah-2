@@ -5,6 +5,10 @@
   --shadow: #050505;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Ancizar Serif";
   font-weight: 500;
@@ -14,6 +18,11 @@ body {
   margin: 0;
   overflow-x: hidden;
   text-align: center;
+}
+
+body.scroll-lock {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .hero {
@@ -46,8 +55,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 580px;
-  height: 580px;
+  width: 40vw;
+  height: 40vw;
   transform: translate(-50%, -50%);
   z-index: -1;
   opacity: 1; /* bisa kamu sesuaikan */
@@ -76,13 +85,13 @@ body {
 
 .hero .ornamen-kanan {
   bottom: -2rem;
-  right: -6rem;
+  right: -2rem;
   transform: rotate(30deg);
 }
 
 .hero .ornamen-kiri {
   top: -2rem;
-  left: -8rem;
+  left: -3rem;
 }
 
 .hero h1 {
@@ -433,7 +442,7 @@ footer i {
   font-size: 4rem;
   position: fixed;
   bottom: 2rem;
-  right: 0.3rem;
+  right: 1rem;
   cursor: pointer;
   color: white;
   opacity: 50%;
@@ -509,7 +518,7 @@ footer i {
     width: 300px;
   }
 
-  .hero .ornamen-kanan{
+  .hero .ornamen-kanan {
     bottom: 0;
     right: -2rem;
   }
@@ -520,7 +529,7 @@ footer i {
     left: -5rem;
   }
 
-  .hero .mandala-bg{
+  .hero .mandala-bg {
     width: 500px;
     height: 500px;
   }
@@ -636,25 +645,27 @@ footer i {
     font-size: 1rem;
   }
 
-  footer p{
+  footer p {
     font-size: 15px;
   }
 
-  footer ul{
+  footer ul {
     gap: 5px;
   }
-  
-  footer li{
+
+  footer li {
     margin: 0.3rem;
   }
 
-  footer i{
+  footer i {
     font-size: 1.4rem;
   }
 
-  .audio-icon-wrapper{
-    font-size: 2.7rem;
+  .audio-icon-wrapper {
+    font-size: 2.4rem;
+    width: 3rem;
+    height: 3rem;
+    right: 1rem;
     bottom: 1.3rem;
-    right: 0.1rem;
   }
 }

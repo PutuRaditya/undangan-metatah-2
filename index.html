@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
     <title>Undangan Metatah 2</title>
 
     <!-- Bootstrap Link CSS -->
@@ -58,20 +61,22 @@
             <h3>Kepada</h3>
             <p>Bapak/Ibu/Saudara/i</p>
             <h3><span>Nama</span></h3>
-            <a href="#home" class="btn btn-custom mt-4" onClick="enableScroll()">Buka Undangan</a>
+            <a href="#home" class="btn btn-custom mt-4" onClick="enableScroll()"
+              >Buka Undangan</a
+            >
           </div>
         </div>
       </div>
     </section>
     <section class="home" id="home">
-      <div class="container">
+      <div class="container-fluid px-4">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-7">
             <img
               src="img/ornamen-batas.webp"
               alt="Ornamen Batas - Hero dengan Home"
               class="batas1"
-            >
+            />
             <h1>Om Swastyastu</h1>
             <p class="p1">
               Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan
@@ -82,7 +87,6 @@
             <h2>I Made Narendra Dwi Putra</h2>
             <p class="p2">Putra dari pasangan</p>
             <h3>I Ketut Murjana,S.E. dan Ni Nyoman Artiniasih</h3>
-            <img
           </div>
         </div>
       </div>
@@ -95,7 +99,7 @@
               src="img/ornamen-batas.webp"
               alt="Ornamen Batas - Hero dengan Home"
               class="batas1"
-            >
+            />
             <h1>Waktu dan Tempat</h1>
             <div class="d-flex justify-content-center">
               <div class="card text-center">
@@ -133,14 +137,14 @@
       </div>
     </section>
     <section class="rsvp" id="rsvp">
-      <div class="container">
+      <div class="container-fluid px-4">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-7">
             <img
               src="img/ornamen-batas.webp"
               alt="Ornamen Batas - Hero dengan Home"
               class="batas1"
-            >
+            />
             <h2>Mohon Doa Restu</h2>
             <form
               method="POST"
@@ -364,11 +368,14 @@
         };
 
         rootElement.style.scrollBehavior = "auto";
+        document.body.classList.add("scroll-lock");
+
       }
 
       function enableScroll() {
         window.onscroll = function () {};
         rootElement.style.scrollBehavior = "smooth";
+        document.body.classList.remove("scroll-lock");
         // localStorage.setItem("opened", "true");
 
         playAudio();
