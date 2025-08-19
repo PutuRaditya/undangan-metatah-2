@@ -101,7 +101,8 @@ body.scroll-lock {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-family: "Imperial Script";
+  font-size: 5rem;
   margin: 0.5rem 0;
 }
 
@@ -145,26 +146,36 @@ body.scroll-lock {
   position: relative;
 }
 
-.home::before {
-  content: "";
+.home .ornamen1,
+.home .ornamen4,
+.time .ornamen3,
+.time .ornamen2 {
   position: absolute;
-  background-image: url(img/background-ornament-2-gradient-up.webp);
-  width: 100%;
-  height: 100%;
-  left: 0;
-  background-repeat: repeat-x;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
+  z-index: -1; /* biar di belakang teks */
+  opacity: 0.2;
+}
+
+.home .ornamen1 {
+  top: 10rem;
+  right: 1rem;
+  width: 500px; /* atur ukuran */
+}
+
+.home .ornamen4 {
+  bottom: 1rem;
+  left: 1rem;
+  width: 450px;
 }
 
 .home .batas1,
 .time .batas1,
-.rsvp .batas1 {
+.rsvp .batas1,
+.gallery .batas1 {
   width: 46rem;
 }
 
 .home h1 {
+  font-family: "Imperial Script";
   padding-top: 5rem;
   font-size: 4.3rem;
 }
@@ -189,8 +200,17 @@ body.scroll-lock {
   color: var(--platinum);
   position: relative;
 }
+.time .ornamen3 {
+  right: -3rem;
+}
 
-.time::before {
+.time .ornamen2 {
+  bottom: 2rem;
+  left: 0;
+  transform: scale(-1, -1);
+}
+
+/* .time::before {
   content: "";
   position: absolute;
   background-image: url(img/background-ornament-2.webp);
@@ -202,7 +222,7 @@ body.scroll-lock {
   background-position: center;
   background-size: cover;
   z-index: -1;
-}
+} */
 
 .time .batas1 {
   padding-bottom: 3rem;
@@ -221,6 +241,7 @@ body.scroll-lock {
   border-radius: 50px;
   box-shadow: 2px 3px 5px 3px var(--shadow);
   padding: 1rem;
+  margin: 0.5rem;
 }
 
 .time .card h2 {
@@ -238,8 +259,9 @@ body.scroll-lock {
 }
 
 .time h4 {
-  margin: 5rem;
-  font-size: 3rem;
+  font-family: "Imperial Script";
+  margin: 3rem;
+  font-size: 4.8rem;
 }
 
 .time h5 {
@@ -289,7 +311,7 @@ body.scroll-lock {
   position: relative;
 }
 
-.rsvp::before {
+/* .rsvp::before {
   content: "";
   position: absolute;
   background-image: url(img/background-ornament-2-gradient-down.webp);
@@ -301,7 +323,7 @@ body.scroll-lock {
   background-position: center;
   background-size: cover;
   z-index: -1;
-}
+} */
 
 .rsvp h2 {
   margin-top: 2.5rem;
@@ -504,6 +526,18 @@ body,
   overscroll-behavior: none;
 }
 
+/* Styling untuk Swiper Mobile */
+.swiper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 /* Media Query */
 
 /* laptop */
@@ -518,7 +552,8 @@ body,
 @media (max-width: 768px) {
   .home .batas1,
   .time .batas1,
-  .rsvp .batas1 {
+  .rsvp .batas1,
+  .gallery .batas1 {
     width: 30rem;
   }
   .hero h1 {
@@ -535,6 +570,11 @@ body,
 
   .home::before {
     top: 0px;
+  }
+
+  .time .ornamen2 {
+    width: 500px;
+    left: -1rem;
   }
 
   .rsvp::before {
@@ -567,7 +607,8 @@ body,
 
   .home .batas1,
   .time .batas1,
-  .rsvp .batas1 {
+  .rsvp .batas1,
+  .gallery .batas1 {
     width: 20rem;
   }
 
@@ -591,6 +632,14 @@ body,
     font-size: 2rem;
   }
 
+  .home .ornamen1 {
+    width: 200px;
+  }
+
+  .home .ornamen4 {
+    width: 200px;
+  }
+
   .home .p1 {
     font-size: 0.8rem;
   }
@@ -611,6 +660,17 @@ body,
 
   .time h1 {
     font-size: 1.8rem;
+  }
+
+  .time .ornamen3 {
+    width: 300px;
+    top: 5rem;
+    right: -4rem;
+  }
+
+  .time .ornamen2 {
+    width: 300px;
+    left: -2rem;
   }
 
   .time .card {
@@ -656,9 +716,9 @@ body,
     margin: 5px;
   }
 
-  .simply-countdown .simply-amount{
+  .simply-countdown .simply-amount {
     font-size: 1rem;
-  } 
+  }
 
   .simply-countdown .simply-word {
     font-size: 0.6rem;
